@@ -1,0 +1,49 @@
+<!-- base template to create our ToDo list -->
+<!-- ejs basically contains html code -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V1 ToDo List</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <div class="box" id="heading">
+      <% if(kindOfday==="Sunday" || kindOfday==="Saturday" ) { %>
+        <div class="weekstatus">Weekend </div>
+        <h1 style="color:rgb(255, 255, 255)">
+          <%= kindOfday %>
+        </h1>
+        <% } else { %>
+          <div class="weekstatus">Weekday </div>
+          <h1 style="color:rgb(255, 255, 255)">
+            <%= kindOfday %>
+          </h1>
+          <% } %>
+    </div>
+
+    <div class="box">
+      <% for( var i=0; i<newItemArr.length ;i++ ) { %>
+        <div class="item">
+          <input type="checkbox">
+          <p>
+            <%= newItemArr[i] %>
+          </p>
+        </div>
+        <% } %>
+
+
+          <form class="item" action="/" method="post">
+            <input placeholder="your todo item..." type="text" name="itemData" autocomplete="off">
+            <button type="submit">➕</button>
+          </form>
+    </div>
+  </body>
+  <footer>Copyright <%=year %> AKABharat &trade;
+  </footer>
+
+</html>
