@@ -1,6 +1,6 @@
 # V1 ToDo List
 
-This is a simple ToDo list web application created using Node.js and Express framework. It allows users to add and manage their daily tasks.
+This is a simple ToDo list web application created using Node.js and Express framework. It allows users to add and manage their daily tasks. It is version 1.
 
 ## Getting Started
 
